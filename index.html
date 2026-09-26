@@ -94,9 +94,15 @@
         border-radius: 0.75rem;
       }
       .map-frame {
-        min-height: 280px;
+        height: 320px;
         border: 0;
         border-radius: 0.75rem;
+      }
+      @media (min-width: 992px) {
+        .map-frame {
+          height: 100%;
+          min-height: 420px;
+        }
       }
     </style>
   </head>
@@ -121,7 +127,7 @@
           </p>
           <div class="d-grid gap-2 d-sm-flex">
             <a class="btn btn-dark btn-lg" href="#visit">Plan your first visit</a>
-            <a class="btn btn-outline-light btn-lg" href="https://www.youtube.com/channel/UCR_AebApzWmoVz6l6juq9vw" target="_blank" rel="noopener noreferrer">Watch on YouTube (opens in new tab)</a>
+            <a class="btn btn-outline-light btn-lg" href="https://www.youtube.com/channel/UCR_AebApzWmoVz6l6juq9vw" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube, opens in a new tab">Watch on YouTube (opens in new tab)</a>
           </div>
         </div>
       </div>
@@ -150,7 +156,7 @@
               </p>
               <iframe
                 title="Map to Vineyard Christian Church of Crystal Lake"
-                class="w-100 h-100 map-frame"
+                class="w-100 map-frame"
                 loading="lazy"
                 sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
                 referrerpolicy="strict-origin-when-cross-origin"
