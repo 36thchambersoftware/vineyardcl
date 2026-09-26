@@ -94,15 +94,11 @@
         border-radius: 0.75rem;
       }
       .map-frame {
-        height: 320px;
         border: 0;
-        border-radius: 0.75rem;
       }
-      @media (min-width: 992px) {
-        .map-frame {
-          height: 100%;
-          min-height: 420px;
-        }
+      .map-ratio {
+        border-radius: 0.75rem;
+        overflow: hidden;
       }
     </style>
   </head>
@@ -154,17 +150,19 @@
                 Open the location directly in
                 <a target="_blank" rel="noopener" href="https://maps.google.com/?q=7105+Virginia+Rd+%2318,+Crystal+Lake,+IL+60014">Google Maps</a>.
               </p>
-              <iframe
-                title="Map to Vineyard Christian Church of Crystal Lake"
-                class="w-100 map-frame"
-                loading="lazy"
-                sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
-                referrerpolicy="strict-origin-when-cross-origin"
-                src="https://maps.google.com/maps?q=7105%20Virginia%20Rd%20%2318%2C%20Crystal%20Lake%2C%20IL%2060014&z=15&output=embed"
-              >
-                Map unavailable? Open directions in
-                <a target="_blank" rel="noopener" href="https://maps.google.com/?q=7105+Virginia+Rd+%2318,+Crystal+Lake,+IL+60014">Google Maps</a>.
-              </iframe>
+              <div class="ratio ratio-4x3 map-ratio">
+                <iframe
+                  title="Map to Vineyard Christian Church of Crystal Lake"
+                  class="w-100 map-frame"
+                  loading="lazy"
+                  sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  src="https://maps.google.com/maps?q=7105%20Virginia%20Rd%20%2318%2C%20Crystal%20Lake%2C%20IL%2060014&z=15&output=embed"
+                >
+                  Map unavailable? Open directions in
+                  <a target="_blank" rel="noopener" href="https://maps.google.com/?q=7105+Virginia+Rd+%2318,+Crystal+Lake,+IL+60014">Google Maps</a>.
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
