@@ -48,8 +48,8 @@
       }
       .hero {
         background:
-          linear-gradient(160deg, rgba(19, 31, 45, 0.82) 0%, rgba(19, 31, 45, 0.5) 100%),
-          url("/assets/images/hero-bg.svg") center/cover no-repeat;
+          linear-gradient(160deg, rgba(19, 31, 45, 0.82) 0%, rgba(19, 31, 45, 0.55) 100%),
+          url("/assets/images/hero-photo.jpg") center/cover no-repeat;
         color: #fff;
       }
       .section-title {
@@ -65,6 +65,32 @@
       .ministry-card {
         border: 1px solid #e5e7eb;
         border-radius: 0.75rem;
+        overflow: hidden;
+      }
+      .ministry-card img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+      .staff-card img {
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+        object-fit: cover;
+        object-position: top center;
+      }
+      .map-frame {
+        border: 0;
+        width: 100%;
+        height: 320px;
+        border-radius: 0.75rem;
+      }
+      .video-frame {
+        border: 0;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 0.75rem;
       }
     </style>
   </head>
@@ -73,7 +99,7 @@
       <div class="container py-3 py-md-4">
         <div class="d-flex align-items-center justify-content-between gap-3">
           <img
-            src="/assets/images/logo.svg"
+            src="/assets/images/logo.png"
             alt="Vineyard Christian Church of Crystal Lake"
             class="logo img-fluid"
             loading="eager"
@@ -107,20 +133,34 @@
                 <p class="mb-4">First Sunday of each month: free hot breakfast at 10:00 AM.</p>
                 <h3 class="h5 fw-semibold">Address</h3>
                 <p class="mb-2">7105 Virginia Rd #18, Crystal Lake, IL 60014</p>
-                <p class="mb-4">At Route 14 & Virginia Road, across from Walgreens and behind CVS.</p>
-                <a class="btn btn-outline-dark w-100" target="_blank" rel="noopener noreferrer" href="https://maps.google.com/?q=7105+Virginia+Rd+%2318,+Crystal+Lake,+IL+60014">Open in Google Maps</a>
+                <p class="mb-3">At Route 14 & Virginia Road, across from Walgreens and behind CVS.</p>
+                <a class="btn btn-outline-dark w-100 mb-4" target="_blank" rel="noopener noreferrer" href="https://maps.google.com/?q=7105+Virginia+Rd+%2318,+Crystal+Lake,+IL+60014">Open in Google Maps</a>
+                <h3 class="h5 fw-semibold">Directions</h3>
+                <iframe
+                  class="map-frame"
+                  title="Map to Vineyard Christian Church of Crystal Lake"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=7105+Virginia+Rd+%2318,+Crystal+Lake,+IL+60014&output=embed"
+                ></iframe>
               </div>
             </div>
             <div class="col-12 col-lg-7">
-              <div class="h-100 p-4 ministry-card bg-white d-flex flex-column justify-content-center">
-                <h3 class="h5 fw-semibold">Directions</h3>
-                <p class="mb-3">Get turn-by-turn directions in Google Maps.</p>
-                <a class="btn btn-dark" target="_blank" rel="noopener noreferrer" href="https://maps.google.com/?q=7105+Virginia+Rd+%2318,+Crystal+Lake,+IL+60014">Open Google Maps<span class="visually-hidden"> (opens in new tab)</span></a>
+              <div class="h-100 ministry-card bg-white overflow-hidden">
+                <iframe
+                  class="video-frame"
+                  title="Vineyard Christian Church of Crystal Lake video"
+                  loading="lazy"
+                  src="https://www.youtube-nocookie.com/embed/6wy0RO4swcY"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       <section class="py-5 bg-light border-top border-bottom">
         <div class="container">
@@ -158,12 +198,62 @@
         <div class="container">
           <h2 class="h3 fw-bold section-title mb-4">Programs & ministries</h2>
           <div class="row g-3">
-            <div class="col-12 col-md-6 col-xl-4"><div class="p-4 h-100 ministry-card"><h3 class="h5">Kingdom Men</h3><p class="mb-0">Encouragement, accountability, and practical support for men in every stage of life.</p></div></div>
-            <div class="col-12 col-md-6 col-xl-4"><div class="p-4 h-100 ministry-card"><h3 class="h5">Kingdom Women</h3><p class="mb-0">Connection, growth, and support for women through gatherings and shared life.</p></div></div>
-            <div class="col-12 col-md-6 col-xl-4"><div class="p-4 h-100 ministry-card"><h3 class="h5">Kingdom Kids</h3><p class="mb-0">Safe, engaging Sunday experiences for children with age-appropriate teaching.</p></div></div>
-            <div class="col-12 col-md-6 col-xl-4"><div class="p-4 h-100 ministry-card"><h3 class="h5">Youth Group</h3><p class="mb-0">A place for middle and high school students to build friendships and faith.</p></div></div>
-            <div class="col-12 col-md-6 col-xl-4"><div class="p-4 h-100 ministry-card"><h3 class="h5">Food Pantry</h3><p class="mb-0">Practical help for individuals and families facing food insecurity in our community.</p></div></div>
-            <div class="col-12 col-md-6 col-xl-4"><div class="p-4 h-100 ministry-card"><h3 class="h5">Africa Missions</h3><p class="mb-0">Partnership and outreach efforts supporting communities and church ministry in Africa.</p></div></div>
+            <div class="col-12 col-md-6 col-xl-4"><div class="h-100 ministry-card"><div class="p-4"><h3 class="h5">Kingdom Men</h3><p class="mb-0">Encouragement, accountability, and practical support for men in every stage of life.</p></div></div></div>
+            <div class="col-12 col-md-6 col-xl-4"><div class="h-100 ministry-card"><div class="p-4"><h3 class="h5">Kingdom Women</h3><p class="mb-0">Connection, growth, and support for women through gatherings and shared life.</p></div></div></div>
+            <div class="col-12 col-md-6 col-xl-4"><div class="h-100 ministry-card"><div class="p-4"><h3 class="h5">Kingdom Kids</h3><p class="mb-0">Safe, engaging Sunday experiences for children with age-appropriate teaching.</p></div></div></div>
+            <div class="col-12 col-md-6 col-xl-4"><div class="h-100 ministry-card"><div class="p-4"><h3 class="h5">Youth Group</h3><p class="mb-0">A place for middle and high school students to build friendships and faith.</p></div></div></div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="h-100 ministry-card">
+                <img src="/assets/images/ministry-food-pantry.jpg" alt="Volunteers at the Crystal Lake Food Pantry" class="w-100" loading="lazy" width="900" height="571" />
+                <div class="p-4"><h3 class="h5">Food Pantry</h3><p class="mb-0">Practical help for individuals and families facing food insecurity in our community.</p></div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="h-100 ministry-card">
+                <img src="/assets/images/ministry-africa.jpg" alt="Vineyard church plant ministry in Africa" class="w-100" loading="lazy" width="900" height="675" />
+                <div class="p-4"><h3 class="h5">Africa Missions</h3><p class="mb-0">Partnership and outreach efforts supporting communities and church ministry in Africa.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-light border-top border-bottom">
+        <div class="container">
+          <h2 class="h3 fw-bold section-title mb-4">Our leadership</h2>
+          <div class="row g-3">
+            <div class="col-12 col-sm-6 col-xl-3">
+              <div class="h-100 p-4 ministry-card staff-card bg-white text-center">
+                <img src="/assets/images/staff/tim-mengler.jpg" alt="Tim Mengler" loading="lazy" width="140" height="140" />
+                <h3 class="h5 mt-3 mb-1">Tim Mengler</h3>
+                <p class="text-uppercase small fw-semibold text-secondary mb-2">Pastor</p>
+                <p class="mb-0 small">Leads our church alongside his wife Amy, with a heart for authentic relationships and church planting.</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+              <div class="h-100 p-4 ministry-card staff-card bg-white text-center">
+                <img src="/assets/images/staff/amy-mengler.jpg" alt="Amy Mengler" loading="lazy" width="140" height="140" />
+                <h3 class="h5 mt-3 mb-1">Amy Mengler</h3>
+                <p class="text-uppercase small fw-semibold text-secondary mb-2">Worship Leader</p>
+                <p class="mb-0 small">"We never thought God would bring us on such an adventure."</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+              <div class="h-100 p-4 ministry-card staff-card bg-white text-center">
+                <img src="/assets/images/staff/catherine-coltman.jpg" alt="Catherine Coltman" loading="lazy" width="140" height="140" />
+                <h3 class="h5 mt-3 mb-1">Catherine Coltman</h3>
+                <p class="text-uppercase small fw-semibold text-secondary mb-2">Teacher</p>
+                <p class="mb-0 small">"Being able to help a child develop to their potential makes it all worthwhile."</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+              <div class="h-100 p-4 ministry-card staff-card bg-white text-center">
+                <img src="/assets/images/staff/scott-waltz.jpg" alt="Scott Waltz" loading="lazy" width="140" height="140" />
+                <h3 class="h5 mt-3 mb-1">Scott Waltz</h3>
+                <p class="text-uppercase small fw-semibold text-secondary mb-2">Children's Teacher</p>
+                <p class="mb-0 small">"I teach because I want to pass the wonder of Christianity on to others."</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
